@@ -1,0 +1,47 @@
+/* ============================================
+   Cine-ku — Responsive
+   ============================================ */
+@media (max-width: 900px) {
+  .detail-container { grid-template-columns: 1fr; gap: 24px; text-align: center; }
+  .detail-poster { max-width: 240px; margin: 0 auto; }
+  .detail-meta, .detail-genres, .detail-actions { justify-content: center; }
+  .hero-carousel { height: 65vh; }
+}
+
+@media (max-width: 768px) {
+  .nav-container { gap: 12px; padding: 12px 16px; }
+  .nav-links {
+    position: fixed;
+    top: 64px; left: 0; right: 0;
+    background: var(--bg-2);
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    border-bottom: 1px solid var(--border);
+    transform: translateY(-150%);
+    transition: transform var(--transition);
+  }
+  .nav-links.open { transform: translateY(0); }
+  .nav-links a { font-size: 1.05rem; }
+  .hamburger { display: flex; }
+  .nav-auth { margin-left: auto; }
+  .btn-login { padding: 7px 12px; font-size: 0.8rem; }
+  .user-chip span { display: none; }
+
+  .main-content { padding: 0 16px; }
+  .movie-card { flex: 0 0 160px; }
+  .grid-movies { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 14px; }
+  .section-head h2 { font-size: 1.3rem; }
+
+  .hero-carousel { height: 70vh; min-height: 420px; }
+  .slider-btn { display: none; }
+}
+
+@media (max-width: 480px) {
+  .movie-card { flex: 0 0 140px; }
+  .grid-movies { grid-template-columns: repeat(2, 1fr); }
+  .movie-info { padding: 10px; }
+  .movie-title { font-size: 0.9rem; }
+  .movie-overview { display: none; }
+  .hero-content p { -webkit-line-clamp: 2; font-size: 0.95rem; }
+}

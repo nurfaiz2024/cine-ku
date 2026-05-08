@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Film — Cine-ku</title>
+  <link rel="icon" href="../assets/logo/logo.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/detail.css" />
+  <link rel="stylesheet" href="../css/responsive.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-mark">🎬</span>
+        <span class="logo-text">Cine-<span>ku</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="../index.html">Home</a>
+        <a href="../search.html">Search</a>
+        <a href="../wishlist.html">Wishlist</a>
+        <a href="../about.html">About</a>
+      </nav>
+      <div class="nav-auth" id="navAuth"></div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="detailRoot">
+    <div class="loading">Memuat detail film...</div>
+  </main>
+
+  <!-- Trailer modal -->
+  <div class="trailer-modal" id="trailerModal">
+    <div class="trailer-inner">
+      <button class="trailer-close" id="trailerClose">×</button>
+      <div class="trailer-frame" id="trailerFrame"></div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Cine-ku — Built by <strong>nfbs</strong> · Data by TMDb</p>
+  </footer>
+
+  <script>window.CINEKU_BASE = '../';</script>
+  <script type="module" src="../js/firebase.js"></script>
+  <script type="module" src="../js/auth.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/wishlist.js"></script>
+  <script src="../js/detail.js"></script>
+  <script src="../js/app.js"></script>
+</body>
+</html>

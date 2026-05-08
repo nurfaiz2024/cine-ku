@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wishlist — Cine-ku</title>
+  <link rel="icon" href="assets/logo/logo.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-mark">🎬</span>
+        <span class="logo-text">Cine-<span>ku</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="search.html">Search</a>
+        <a href="wishlist.html" class="active">Wishlist</a>
+        <a href="about.html">About</a>
+      </nav>
+      <div class="nav-auth" id="navAuth"></div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <section class="search-hero">
+      <h1>My Wishlist</h1>
+      <p>Daftar film favorit yang kamu simpan.</p>
+    </section>
+
+    <section class="movie-section">
+      <div class="grid-movies" id="wishlistGrid"></div>
+      <div id="wishlistEmpty" class="empty-state-card" style="display:none;">
+        <h3>Belum ada film di wishlist</h3>
+        <p>Login dengan Google lalu tambahkan film favoritmu dari Home atau Search.</p>
+        <a href="index.html" class="btn-primary">Jelajahi Film</a>
+      </div>
+      <div id="loginRequired" class="empty-state-card" style="display:none;">
+        <h3>🔒 Login Diperlukan</h3>
+        <p>Kamu harus login dengan akun Google untuk mengakses wishlist.</p>
+        <button class="btn-primary" id="loginPrompt">Login dengan Google</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Cine-ku — Built by <strong>nfbs</strong> · Data by TMDb</p>
+  </footer>
+
+  <script type="module" src="js/firebase.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/wishlist.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
